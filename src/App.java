@@ -1,12 +1,36 @@
 import models.Persona;
 import structures.node.Node;
 import structures.tress.Binary;
+import structures.tress.Ejercicio1;
+import structures.tress.Ejercicio2;
 import structures.tress.intTree;
 
 public class App {
     public static void main(String[] args) throws Exception {
         runIntTree();
         runBinaryTree();
+        runEjercicios();
+
+    }
+
+    private static void runEjercicios() {
+        Ejercicio1 ejercicio1 = new Ejercicio1();
+        int[] numeros = new int[] { 5, 3, 7, 2, 4, 6, 8 };
+        for (int numero : numeros) {
+            System.out.println(numero);
+        }
+
+        Ejercicio2 ejercicio2 = new Ejercicio2();
+        int[] numeros2 = new int[] { 5, 3, 7, 2, 4, 6, 8 };
+        Binary<Integer> tree = new Binary<>();
+        for (int numero : numeros2) {
+            tree.add(numero);
+        }
+
+        Node<Integer> root = tree.getRoot();
+        ejercicio1.insert(numeros);
+
+        ejercicio2.inverTree(root);
     }
 
     private static void runBinaryTree() {

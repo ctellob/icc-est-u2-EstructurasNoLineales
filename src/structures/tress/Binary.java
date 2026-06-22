@@ -105,4 +105,9 @@ public class Binary<T extends Comparable<T>> {
         int pesoRight = getHeightRecursivo(pesoActual.getRight());
         return pesoLeft + pesoRight + 1;
     }
+
+    public Node<T> getRoot() {
+        return root;
+    }
+
 }
