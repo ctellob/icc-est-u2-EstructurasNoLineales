@@ -1,18 +1,15 @@
-## Getting Started
+## Practica: Estructuras No Líneales
+# Datos del Estudiante
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+    + Nombre: Carlos Tello
+    + Curso: Estructura de Datos
 
-## Folder Structure
+## Creacion de arboles de numeros y de personas
 
-The workspace contains two folders by default, where:
+Fecha: 17 de Junio de 2026
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+En esta práctica construimos una estructura para organizar números. Hicimos que, al ir agregando cada número nuevo, este busque su lugar y se acomode automáticamente: los más pequeños se van hacia el lado izquierdo y los más grandes hacia el derecho. Para lograr que esto se haga solo, usamos recursividad
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+### 2. Árbol Binario Genérico (`Binary<T>`)
+Esta es una versión más avanzada y flexible que la anterior. Al utilizar variables genericas de Java, nos permite reutilizar exactamente el mismo código para organizar cualquier tipo de dato como palabras de texto etc, siempre y cuando estos elementos tengan una regla clara para compararse entre sí.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
