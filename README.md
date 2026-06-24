@@ -12,7 +12,7 @@ En esta práctica construimos una estructura para organizar números. Hicimos qu
 
 ![Estructura del intTree](src/img/imgIntTree.png)
 
-### 2. Árbol Binario Genérico (`Binary<T>`)
+### 2. Árbol Binario Genérico
 Esta es una versión más avanzada y flexible que la anterior. Al utilizar variables genericas de Java, nos permite reutilizar exactamente el mismo código para organizar cualquier tipo de dato como palabras de texto etc, siempre y cuando estos elementos tengan una regla clara para compararse entre sí.
 
 ![Estructura del Árbol Binario](src/img/imgBinaryTree.png)
