@@ -6,6 +6,7 @@ import structures.tress.Binary;
 import structures.tress.Ejercicio1;
 import structures.tress.Ejercicio2;
 import structures.tress.Ejercicio3;
+import structures.tress.Ejercicio4;
 import structures.tress.intTree;
 
 public class App {
@@ -39,19 +40,34 @@ public class App {
         }
 
         List<List<Node<Integer>>> niveles = ejercicio3.listLevels(treeEj3.getRoot());
-        System.out.println("Resultado de Listar Niveles:");
+
+        Ejercicio4 ejercicio4 = new Ejercicio4();
+        Binary<Integer> treeEj4 = new Binary<>();
+        int[] valoresEj4 = new int[] { 4, 2, 7, 1, 3, 6, 9 };
+        for (int numero : valoresEj4) {
+            treeEj4.add(numero);
+        }
 
         Node<Integer> root = tree.getRoot();
 
-        System.out.println("\n--- Ejecutando Ejercicio 1 ---");
+        System.out.println("\n--- Ejercicio 1 ---");
         ejercicio1.insert(numeros);
 
-        System.out.println("\n--- Ejecutando Ejercicio 2 ---");
+        System.out.println("\n--- Ejercicio 2 ---");
         ejercicio2.inverTree(root);
 
-        System.out.println("\n--- Ejecutando Ejercicio 3 ---");
+        System.out.println("\n--- Ejercicio 3 ---");
+        ejercicio3.printTree(treeEj3.getRoot());
+        System.out.println("Resultado de Listar Niveles:");
         ejercicio3.printLevels(niveles);
 
+        System.out.println("\n--- Ejercicio 4 ---");
+
+        treeEj4.getRoot().getLeft().getLeft().setLeft(new Node<>(8));
+
+        int profundidad = ejercicio4.maxDepth(treeEj4.getRoot());
+
+        System.out.println("\nProfundidad Máxima: " + profundidad);
     }
 
     private static void runBinaryTree() {

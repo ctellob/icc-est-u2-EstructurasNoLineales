@@ -41,4 +41,21 @@ public class Ejercicio3 {
         }
     }
 
+    public void printTree(Node<Integer> root) {
+        printTreeRecursivo(root, 0);
+    }
+
+    public void printTreeRecursivo(Node<Integer> actual, int nivel) {
+        if (actual == null) {
+            return;
+        }
+
+        printTreeRecursivo(actual.getRight(), nivel + 1);
+        for (int i = 0; i < nivel; i++) {
+            System.out.print("      ");
+        }
+        System.out.println(actual);
+        printTreeRecursivo(actual.getLeft(), nivel + 1);
+    }
+
 }
