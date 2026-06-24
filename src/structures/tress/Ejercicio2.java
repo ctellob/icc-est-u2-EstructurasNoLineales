@@ -16,7 +16,10 @@ public class Ejercicio2 {
         if (actual == null) {
             return;
         }
-        System.out.println("Actual" + actual);
+        Node<Integer> left = actual.getLeft();
+        Node<Integer> right = actual.getRight();
+        actual.setLeft(right);
+        actual.setRight(left);
         inverTreeRecursivo(actual.getLeft());
         inverTreeRecursivo(actual.getRight());
     }

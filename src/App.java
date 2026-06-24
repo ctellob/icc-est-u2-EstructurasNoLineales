@@ -1,19 +1,23 @@
+import java.util.List;
+
 import models.Persona;
 import structures.node.Node;
 import structures.tress.Binary;
 import structures.tress.Ejercicio1;
 import structures.tress.Ejercicio2;
+import structures.tress.Ejercicio3;
 import structures.tress.intTree;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        runIntTree();
+        // runIntTree();
         runBinaryTree();
         runEjercicios();
 
     }
 
     private static void runEjercicios() {
+
         Ejercicio1 ejercicio1 = new Ejercicio1();
         int[] numeros = new int[] { 5, 3, 7, 2, 4, 6, 8 };
         for (int numero : numeros) {
@@ -27,10 +31,27 @@ public class App {
             tree.add(numero);
         }
 
+        Ejercicio3 ejercicio3 = new Ejercicio3();
+        int[] valoresEj3 = new int[] { 4, 2, 7, 1, 3, 6, 9 };
+        Binary<Integer> treeEj3 = new Binary<>();
+        for (int numero : valoresEj3) {
+            treeEj3.add(numero);
+        }
+
+        List<List<Node<Integer>>> niveles = ejercicio3.listLevels(treeEj3.getRoot());
+        System.out.println("Resultado de Listar Niveles:");
+
         Node<Integer> root = tree.getRoot();
+
+        System.out.println("\n--- Ejecutando Ejercicio 1 ---");
         ejercicio1.insert(numeros);
 
+        System.out.println("\n--- Ejecutando Ejercicio 2 ---");
         ejercicio2.inverTree(root);
+
+        System.out.println("\n--- Ejecutando Ejercicio 3 ---");
+        ejercicio3.printLevels(niveles);
+
     }
 
     private static void runBinaryTree() {
