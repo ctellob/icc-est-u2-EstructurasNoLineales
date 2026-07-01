@@ -1,5 +1,10 @@
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
+import collections.maps.Maps;
+import collections.set.Sets;
+import models.Contacto;
 import models.Persona;
 import structures.node.Node;
 import structures.tress.Binary;
@@ -14,7 +19,53 @@ public class App {
         // runIntTree();
         runBinaryTree();
         runEjercicios();
+        runSets();
+    }
 
+    private static void runSets() {
+        Sets sets = new Sets();
+        // Implementacion -> HashSet hashcode
+        System.out.println("* HashCode: ");
+        Set<String> hashSet = sets.construirHashSet();
+        System.out.println(hashSet);
+        System.out.println("Size= " + hashSet.size());
+
+        System.out.println("-------------------------------------------------------------");
+
+        // Implementacion -> LinkedHashSet hashcode
+        System.out.println("* LinkedHashCode: ");
+        Set<String> lSet = sets.construirLinkedHashSet();
+        System.out.println(lSet);
+        System.out.println("Size= " + lSet.size());
+
+        System.out.println("-------------------------------------------------------------");
+
+        // Implementacion -> TreeSet hashcode
+        System.out.println("* TreeSet: ");
+        Set<String> TreeSet = sets.construirTreeSet();
+        System.out.println(TreeSet);
+        System.out.println("Size= " + TreeSet.size());
+
+        System.out.println("-------------------------------------------------------------");
+
+        // Implementacion -> Hash Contact Set hashcode
+        System.out.println("* Hash Contact Set: ");
+        Set<Contacto> tSet = sets.construirHashSetContacto();
+        System.out.println(tSet);
+        System.out.println("Size= " + tSet.size());
+
+        System.out.println("-------------------------------------------------------------");
+
+        // Implementacion -> Tree Contact Set hashcode
+        System.out.println("* Tree Contact Set: ");
+        Set<Contacto> tCSet = sets.construirTreeSetContacto();
+        System.out.println(tCSet);
+        System.out.println("Size= " + tCSet.size());
+
+        System.out.println("-------------------------------------------------------------");
+        System.out.println("* Hash Map: ");
+        Maps maps = new Maps();
+        maps.construirHashMap();
     }
 
     private static void runEjercicios() {
